@@ -6,28 +6,8 @@
 
     {% from "_macro.html" import show_card, show_list_h, render_field%}
 
-    <!-- {{ show_card()}}
-    <hr class="">
-    {{ show_list_h("damian")}} -->
+    
 
-    <form action="" name ="sentMessage" id="contactForm" method="POST" class="form">
-        <div class="form-group">
-        
-        {{ render_field(form.username,class='form-control')}}
-        
-
-        </div>
-        <div class="form-group">
-       
-        {{ render_field(form.email,class='form-control')}}
-        </div>
-        <div class="form-group">
-       
-        {{ render_field(form.comment,class='form-control')}}
-        {{form.honeypot}} 
-        </div>
-       
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    
 
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+    {% from "_macro.html" import show_card, show_list_h, render_field%}
+
+   
+
+    <form action="" name ="sentMessage" id="contactForm" method="POST" class="form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" class="">
+        <div class="form-group">
+       
+        {{ render_field(form.comment,class='form-control')}}
+       
+        </div>
+        {{form.honeypot}} 
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}
